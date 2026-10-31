@@ -212,10 +212,11 @@ details[open] > .room__head .room__mark::after { rotate: 0deg; }
 details.room:not([open]) > .room__head:hover .room__name { color: var(--accent); }
 .room__more { display: grid; gap: 8px; max-width: 72ch; padding-bottom: 18px; }
 
-.say { padding-block: clamp(36px, 6vw, 80px); border-top: 1px solid var(--line); }
-.say blockquote { max-width: 34ch; font: 600 clamp(1.5rem, 2.8vw, 2.25rem)/1.14 var(--cond); }
-.say--big blockquote { max-width: 24ch; font: 800 clamp(2.4rem, 6.4vw, 5.5rem)/.98 var(--display); }
-.say figcaption { margin-top: 12px; color: var(--muted); font: 500 1.0625rem var(--cond); }
+.guest { max-width: 66ch; margin-top: 14px; }
+.guest blockquote { font: italic 400 1rem/1.5 var(--text); quotes: '«' '»'; }
+.guest blockquote::before { content: open-quote; }
+.guest blockquote::after { content: close-quote; }
+.guest figcaption { margin-top: 3px; color: var(--muted); font: 500 .9375rem var(--cond); }
 
 .rules { margin-top: 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .rules summary { padding-block: 14px; font: 700 1.375rem var(--cond); cursor: pointer; }

@@ -89,16 +89,18 @@ function room(r, d) {
   return `<details class="room" data-cap="${r.places + r.extra}"><summary class="room__head">${head}<span class="room__mark" aria-hidden="true"></span></summary><div class="room__more"><p>${esc(r.text)}</p><a class="link" href="${link}" target="_blank" rel="noopener">Открыть этот номер в бронировании</a></div></details>`;
 }
 
+// Отзыв живёт внутри карточки. Подпись общая: на старом сайте отзывы не привязаны к конкретным домам
+const guest = (r) => (r ? `<figure class="guest"><blockquote>${esc(r.text)}</blockquote><figcaption>${esc(r.name)}${r.role ? `, ${esc(r.role)}` : ''}, отзыв гостя</figcaption></figure>` : '');
+
 function house(h, d) {
   const strip = h.photos.length ? `<div class="strip" tabindex="0" role="group" aria-label="Фото: ${esc(h.name)}">${h.photos.map((id, i) => `<figure class="strip__item${i === 0 ? ' strip__item--lead' : ''}">${img(d.photos, id, '', i === 0 ? '(max-width: 760px) 86vw, 46vw' : '(max-width: 760px) 66vw, 24vw')}</figure>`).join('')}</div>` : '';
   return `<article class="house" id="dom-${h.id}">
     <header class="house__head"><h3>${esc(h.name)}</h3><p>${esc(h.text)}</p></header>
     ${strip}
     <div class="house__rooms">${h.rooms.map((r) => room(r, d)).join('')}</div>
+    ${guest(h.review)}
   </article>`;
 }
-
-const say = (r, cls = '') => `<figure class="say ${cls}"><blockquote>${esc(r.text)}</blockquote><figcaption>${esc(r.name)}${r.role ? `, ${esc(r.role)}` : ''}</figcaption></figure>`;
 
 function yardItem(it, d, i) {
   return `<article class="yard yard--${it.id}">
@@ -117,7 +119,7 @@ function route(r, d) {
   const btn = r.route ? `<a class="route__map" href="#tur" data-fly="${r.route}">Пройти по карте</a>` : '';
   return `<article class="route">
     <div class="route__name"><h3>${esc(r.name)}</h3><p>${esc(r.kind)}</p></div>
-    <p class="route__text">${esc(r.text)}</p>
+    <div class="route__body"><p class="route__text">${esc(r.text)}</p>${guest(r.review)}</div>
     <div class="route__side">${stats}${btn}</div>
   </article>`;
 }
@@ -220,12 +222,7 @@ ${d.indexable ? `<link rel="canonical" href="${d.canonical}">` : '<meta name="ro
     </div>
     <p class="picker__note" id="picker-note">За дополнительное место ${rub(d.rooms.extraPlace.weekday)} в будни и ${rub(d.rooms.extraPlace.weekend)} в выходные.</p>
     <div class="houses">
-      ${d.houses.slice(0, 2).map((h) => house(h, d)).join('')}
-      ${say(d.reviewsRooms[0], 'say--big')}
-      ${d.houses.slice(2, 4).map((h) => house(h, d)).join('')}
-      ${say(d.reviewsRooms[2])}
-      ${d.houses.slice(4).map((h) => house(h, d)).join('')}
-      ${say(d.reviewsRooms[1])}
+      ${d.houses.map((h) => house(h, d)).join('')}
     </div>
     <details class="rules">
       <summary>Условия брони и заезда</summary>
@@ -258,7 +255,6 @@ ${d.indexable ? `<link rel="canonical" href="${d.canonical}">` : '<meta name="ro
     <p class="lead">${esc(d.excursions.lead)}</p>
     <a class="btn btn--dark" href="tel:${d.phoneHref}">Позвонить управляющему</a>
     <div class="routes">${d.excursions.items.map((r) => route(r, d)).join('')}</div>
-    ${say(d.reviewExcursions, 'say--big')}
   </div>
 </section>
 
