@@ -1,0 +1,16 @@
+[
+  {"id":"larkino-dawn","source":"larkino-dawn","start":570,"length":13,"fade":1.5,"speed":0.6,"posterAt":4,"crf":27},
+  {"id":"iremel-morning","source":"iremel-sunset-drone","start":171.6,"length":6.4,"fade":1,"posterAt":3},
+  {"id":"iremel-dusk","source":"iremel-sunset-drone","start":100,"length":9,"fade":1.2,"posterAt":3},
+  {"id":"iremel-rust","source":"iremel-sunset-drone","start":75,"length":6,"fade":1,"posterAt":2},
+  {"id":"malinovaya-rime","source":"malinovaya-clouds","start":71,"length":11,"fade":1.2,"posterAt":4},
+  {"id":"malinovaya-blue","source":"malinovaya-clouds","start":19,"length":7,"fade":1.2,"posterAt":1},
+  {"id":"gold-slope","source":"ural-four-seasons","start":186,"length":10,"fade":1.2,"posterAt":3},
+  {"id":"gold-rock","source":"ural-four-seasons","start":212,"length":12,"fade":1.2,"posterAt":4},
+  {"id":"belaya-summer","source":"belaya-summer","start":190,"length":9,"fade":1.2,"posterAt":3,"grade":"eq=saturation=0.82:contrast=1.02"},
+  {"id":"belaya-autumn","source":"belaya-autumn","start":186,"length":10,"fade":1.2,"posterAt":3,"grade":"eq=saturation=0.82:contrast=1.02"},
+  {"id":"tirlyan-sunset","source":"tirlyan-sunset","start":44,"length":10,"fade":1.2,"posterAt":3},
+  {"id":"yuryuzan-river","source":"yuryuzan-drone","start":8.5,"length":5.4,"fade":1,"crop":"3840:1608:0:276","posterAt":2},
+  {"id":"winter-plain","source":"iremel-winter","start":77,"length":9,"fade":1.2,"posterAt":3},
+  {"id":"nugush-river","source":"bashkiria-drone","start":102,"length":9,"fade":1.2,"posterAt":3}
+]

@@ -1,0 +1,9 @@
+dist/
+node_modules/
+.impeccable/review/
+.impeccable/decision/
+.impeccable/mocks/
+.claude/
+.playwright-mcp/
+.impeccable/detect.json
+.impeccable/skylines-preview.html

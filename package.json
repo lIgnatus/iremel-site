@@ -1,0 +1,9 @@
+{
+  "name": "iremel-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "serve": "node tools/serve.mjs"
+  }
+}

@@ -1,0 +1,45 @@
+# Иремель
+
+Новый сайт комплекса гостевых домов «Иремель» (посёлок Кордонный, Тюлюк). Статический сайт: одна страница, без сервера и базы данных.
+
+Посмотреть: https://lignatus.github.io/iremel-site/
+
+## Как поменять цены и тексты
+
+Всё лежит в одном файле: [src/data/site.json](src/data/site.json). Цены номеров в полях `weekday` (будни) и `weekend` (выходные), услуги в разделе `yard`, экскурсии в `excursions`, отзывы в `reviewsRooms` и `reviewExcursions`.
+
+На GitHub файл можно править прямо в браузере: после сохранения сайт сам пересоберётся за пару минут.
+
+## Как вернуть тур Matterport
+
+Модель `a4ndMTs8qYJ` сейчас снята с Matterport. Когда владелец аккаунта её восстановит, впишите идентификатор в поле `matterportId` в `src/data/site.json`, и в разделе 3D-тур появится ссылка на тур по домам. 3D-карта рельефа при этом останется.
+
+## Как перенести на iremel.org
+
+1. В `src/data/site.json` поставьте `"indexable": true`, а в `siteUrl` укажите `https://iremel.org/`.
+2. Соберите сайт и скопируйте содержимое папки `dist` на хостинг. Сейчас сайт закрыт от поисковиков, чтобы не спорить со старым iremel.org.
+
+Старые адреса `/nomera/`, `/jekskursii/`, `/3d-tur/`, `/novosti/`, `/albums/` уже ведут на новые разделы.
+
+## Сборка
+
+Нужен Node.js 20 или новее, зависимостей нет.
+
+```bash
+node tools/build.mjs
+```
+
+```bash
+node tools/serve.mjs
+```
+
+Второй командой сайт открывается на http://localhost:4173.
+
+## Откуда данные
+
+- Видео: фрагменты роликов с лицензией CC BY, авторы и ссылки в подвале сайта. Нарезка: `tools/make-clips.mjs`, `tools/clips.json`.
+- Рельеф: Copernicus DEM GLO-30. Тропы, реки, вершины: OpenStreetMap, ODbL. Расчёты: `tools/make-terrain.mjs`, `tools/make-routes.mjs`.
+- Фото: комплекс «Иремель», iremel.org и система бронирования LitePMS.
+- Шрифт: Sofia Sans, лицензия OFL.
+
+Дизайн-система описана в [DESIGN.md](DESIGN.md), продуктовые факты в [PRODUCT.md](PRODUCT.md).

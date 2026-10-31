@@ -1,0 +1,49 @@
+[
+  { "id": "ext-logs", "from": "site/slider__cache__9ec0ccff4578e155e3f9b791d5750b04__WhatsApp-Image-2020-12-15-at-18.47.26-1.jpg", "alt": "Бревенчатый дом с верандой под соснами, летний день" },
+  { "id": "ext-houses", "from": "site/slider__cache__9f3d2f892283b8189c484a86e6d1aed0__WhatsApp-Image-2020-12-15-at-18.47.29.jpg", "alt": "Два дома комплекса за плетёным забором, позади лес" },
+  { "id": "ext-cabin", "from": "site/slider__cache__1c466935428f827355bac25488ec00e5__WhatsApp-Image-2020-12-15-at-18.47.22.jpg", "alt": "Небольшой дом на зелёной лужайке среди елей" },
+  { "id": "ext-bridge", "from": "site/slider__cache__911d00ccb443e88f64e6ecb7f112b89d__WhatsApp-Image-2020-12-15-at-18.47.30-2.jpg", "alt": "Подвесной мост через реку, за ним осенний лес и каменистый хребет" },
+  { "id": "ext-river", "from": "site/slider__cache__8ed6eb7fd571d3a08d27e211ab24616a__WhatsApp-Image-2020-12-15-at-18.47.30.jpg", "alt": "Река у посёлка и хребет на горизонте" },
+  { "id": "ext-ridge", "from": "site/slider__cache__3a9f2294c78e16b3e049f2c58dca738c__WhatsApp-Image-2020-12-15-at-18.47.19.jpg", "alt": "Вид с хребта на тайгу и дальние горы" },
+  { "id": "ext-meadow", "from": "site/slider23__photo_2025-07-21_02-25-16.jpeg", "alt": "Сруб с резной лестницей и луг с одуванчиками" },
+  { "id": "ext-play", "from": "site/slider23__photo_2025-07-21_02-25-57.jpeg", "alt": "Детская горка на лугу с одуванчиками" },
+  { "id": "ext-fence", "from": "site/slider23__photo_2025-07-21_02-25-572.jpeg", "alt": "Дом за плетёным забором, лужайка и фонари" },
+  { "id": "ext-gazebo", "from": "site/slider23__photo_2025-07-21_02-25-583.jpeg", "alt": "Большая беседка на лугу" },
+
+  { "id": "tum-beds", "from": "rooms/2311/c93622c58cfb27f3081a4175b6218786.jpeg", "alt": "Спальня с двумя кроватями, бревенчатые стены" },
+  { "id": "tum-living", "from": "rooms/2311/2ad2faa1288d50471883770a4235da10.jpeg", "alt": "Кухня-гостиная с телевизором" },
+  { "id": "tum-dining", "from": "rooms/2311/6755c6a791e9928b3cdcf9a7469beadb.jpeg", "alt": "Обеденный стол у окна с занавесками" },
+  { "id": "tum-sign", "from": "rooms/2313/44e6bf8f5fea79212a9ea2b7b77fc9ac.jpeg", "alt": "Табличка на срубе: дом Тюменский, Лесная, 6" },
+  { "id": "tum-winter", "from": "rooms/2313/e3011a0159c9ed66679ccc525ce363cd.jpeg", "alt": "Дома комплекса зимой, вид из окна" },
+
+  { "id": "ufa-double", "from": "rooms/2314/9d9a2ae1804405e757c980cb0dfc76a4.jpeg", "alt": "Спальня с двуспальной кроватью" },
+  { "id": "ufa-twin", "from": "rooms/2314/c1c204bbf395de16ee4862060bdcf4e1.jpeg", "alt": "Спальня с двумя кроватями и ночниками" },
+  { "id": "ufa-living", "from": "rooms/2314/92598d4f4b962a99e0de2ecac5b8ad5d.jpeg", "alt": "Зал с мини-кухней под скатной крышей" },
+  { "id": "ufa-iron", "from": "rooms/2312/c6496e9ecebf854fc033b7be85e056cb.jpeg", "alt": "Номер на двоих, кровать с белой кованой спинкой" },
+
+  { "id": "les-room", "from": "rooms/38379/face6579a0d385beb0be59c612504df8.jpeg", "alt": "Номер на четверых в Лесном доме" },
+  { "id": "les-porch", "from": "rooms/38380/74eb8fee6ae563af0f7c66253eea8423.jpeg", "alt": "Вход в Лесной дом с резным козырьком" },
+  { "id": "les-attic", "from": "rooms/39762/c16174006830a224652ce98f601e2dc4.jpeg", "alt": "Номер на троих под крышей" },
+  { "id": "les-kettle", "from": "rooms/38380/cacff9ceef259351929b217ef98ad38e.jpeg", "alt": "Чайник и посуда на столе у ночника" },
+
+  { "id": "tyu-kids", "from": "rooms/3469/da72bf701ec2c1022f394d8347af60e5.jpeg", "alt": "Детский уголок с кроваткой, столиком и пирамидкой" },
+  { "id": "tyu-sofa", "from": "rooms/3469/cddc35ec9e0d5e476230fd40e446d17b.jpeg", "alt": "Номер с диваном и телевизором" },
+  { "id": "tyu-rug", "from": "rooms/3470/82fb5d4be884cd9c671cc09cf5b7e824.jpeg", "alt": "Кровать с кованой спинкой, на стене ковёр с геометрическим узором" },
+  { "id": "tyu-quilt", "from": "site/2020__07__WhatsApp-Image-2018-07-30-at-20.15.58.jpeg", "alt": "Номер на пятерых, лоскутное покрывало" },
+
+  { "id": "rest-hall", "from": "site/2020__07__IMGP2499-scaled.jpg", "alt": "Обеденный зал ресторана, деревянные столы и красные подушки" },
+  { "id": "rest-fire", "from": "site/2020__07__IMGP2493-scaled.jpg", "alt": "Каминная зона с диваном и креслами" },
+  { "id": "rest-shelf", "from": "site/2020__07__IMGP2515-scaled.jpg", "alt": "Полка с самоваром и старой утварью" },
+  { "id": "rest-out", "from": "site/2020__07__IMGP2516-scaled.jpg", "alt": "Ресторан зимой, бревенчатый фасад и сугробы" },
+
+  { "id": "bath-steam", "from": "site/2020__07__IMGP2529-scaled.jpg", "alt": "Парная дровяной бани, полки из светлого дерева" },
+  { "id": "bath-rest", "from": "site/2020__07__IMGP2531-scaled.jpg", "alt": "Зона отдыха на втором этаже бани" },
+  { "id": "bath-stairs", "from": "site/2020__07__IMGP2527-scaled.jpg", "alt": "Резная лестница в бане" },
+
+  { "id": "tub-steam", "from": "site/2025__02__photo_2025-02-18_15-57-16.jpg", "alt": "Синяя купель на дровах, от воды идёт пар" },
+  { "id": "tub-snow", "from": "site/2025__02__photo_2025-02-18_15-55-59.jpg", "alt": "Купель среди снега, рядом дымит печь" },
+
+  { "id": "gaz-snow", "from": "site/2020__07__IMGP2536-scaled.jpg", "alt": "Беседка с печью под снегом" },
+  { "id": "gaz-table", "from": "site/2020__07__IMGP2538-scaled.jpg", "alt": "Длинный стол в беседке из брёвен" },
+  { "id": "gaz-grill", "from": "site/2020__07__IMGP2540-scaled.jpg", "alt": "Печь и мангал в беседке" }
+]

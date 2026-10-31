@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T20:30:00+05:00",
+  "title": "Design System: Иремель",
+  "extensions": {
+    "colorMeta": {
+      "river-ink": { "role": "neutral", "displayName": "Тёмная вода", "canonical": "#0b1d1a", "tonalRamp": ["#071412", "#0b1d1a", "#14302b", "#21463f", "#3b5c52", "#6f8a7f", "#a8bab0", "#dfe7e2"] },
+      "spruce-deep": { "role": "secondary", "displayName": "Глубокая ель", "canonical": "#0e2621", "tonalRamp": ["#081815", "#0e2621", "#17382f", "#2d4c43", "#4a6a5f", "#7a968b", "#b3c2b8", "#e3eae6"] },
+      "taiga": { "role": "secondary", "displayName": "Тайга", "canonical": "#173b2f", "tonalRamp": ["#0d261e", "#173b2f", "#22513f", "#3a6051", "#5a8270", "#86a698", "#bccdc0", "#e5ede8"] },
+      "larch-gold": { "role": "primary", "displayName": "Золото лиственницы", "canonical": "#c4912f", "tonalRamp": ["#33260a", "#5c4310", "#8a6516", "#c4912f", "#d9ab50", "#e6c47f", "#f0dcb0", "#f9f0dc"] },
+      "lichen-rust": { "role": "primary", "displayName": "Лишайник на камне", "canonical": "#a8482a", "tonalRamp": ["#3c1a0e", "#6b2f1a", "#8a3b22", "#a8482a", "#cb7a5a", "#e2a58b", "#fbe2cf", "#fff3e3"] },
+      "quartzite": { "role": "secondary", "displayName": "Кварцит", "canonical": "#d7dbd4", "tonalRamp": ["#131b18", "#3a4641", "#7f8b84", "#a4aea7", "#c2c8c1", "#d7dbd4", "#e9ece7", "#f4f5f1"] },
+      "birch-paper": { "role": "neutral", "displayName": "Береста", "canonical": "#f1ecdd", "tonalRamp": ["#57513f", "#7d7660", "#a29b84", "#c6bfa9", "#dcd6c4", "#f1ecdd", "#f7f3e7", "#fdfbf4"] },
+      "marker-gold": { "role": "tertiary", "displayName": "Метка тропы", "canonical": "#e0ac48", "tonalRamp": ["#5c4310", "#8a6516", "#b78722", "#e0ac48", "#e8c070", "#f0d49c", "#f6e5c4", "#fcf5e6"] },
+      "ember": { "role": "tertiary", "displayName": "Уголь", "canonical": "#b54a24", "tonalRamp": ["#44190b", "#6f2c14", "#92391a", "#b54a24", "#cf6f4c", "#e39a7e", "#f2c8b6", "#fbe9e1"] }
+    },
+    "typographyMeta": {
+      "wordmark": { "displayName": "Логотип", "purpose": "Только слово ИРЕМЕЛЬ на первом экране, высота букв повторяет силуэт массива." },
+      "display": { "displayName": "Заголовок раздела", "purpose": "Заголовки разделов и большие отметки высоты." },
+      "headline": { "displayName": "Подзаголовок", "purpose": "Дома, услуги, маршруты, большие отзывы." },
+      "title": { "displayName": "Строка", "purpose": "Строки номеров, кнопки, навигация." },
+      "lead": { "displayName": "Подводка", "purpose": "Подводки разделов." },
+      "body": { "displayName": "Текст", "purpose": "Описания до 52ch." }
+    },
+    "shadows": [
+      { "name": "map-panel", "value": "0 18px 44px rgb(0 0 0 / .4)", "purpose": "Панель маршрутов поверх 3D-модели." },
+      { "name": "booking-popover", "value": "0 16px 40px rgb(0 0 0 / .5)", "purpose": "Всплывающий выбор дат." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Подъём букв логотипа, прорисовка тропы, разворот мини-профиля." },
+      { "name": "ridge-drift", "value": "animation-timeline: view()", "purpose": "Дальние слои хребтов смещаются при прокрутке." }
+    ],
+    "breakpoints": [
+      { "name": "panel", "value": "1100px" },
+      { "name": "phone", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Главная кнопка",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Главное действие: поиск номера, бронь.",
+      "html": "<button class=\"ds-btn\">Показать свободные номера</button>",
+      "css": ".ds-btn { padding: .82em 1.35em; border: 0; border-radius: 3px; background: #b54a24; color: #fff6e9; font: 700 1.125rem/1.15 'Sofia Sans Condensed', 'Arial Narrow', sans-serif; transition: background-color .2s, color .2s; } .ds-btn:hover { background: #e0ac48; color: #0b1d1a; } .ds-btn:focus-visible { outline: 2px solid #e0ac48; outline-offset: 3px; }"
+    },
+    {
+      "name": "Переключатель",
+      "kind": "chip",
+      "refersTo": "segment-selected",
+      "description": "Выбор числа гостей и будни или выходные.",
+      "html": "<div class=\"ds-seg\"><button class=\"on\">Будни</button><button>Выходные</button></div>",
+      "css": ".ds-seg { display: inline-flex; border: 1px solid #2d4c43; border-radius: 3px; background: #0e2621; } .ds-seg button { min-height: 44px; padding: 0 .9em; border: 0; background: transparent; color: #f1ecdd; font: 600 1.0625rem 'Sofia Sans Condensed', sans-serif; } .ds-seg button.on { background: #e0ac48; color: #0b1d1a; }"
+    },
+    {
+      "name": "Поле даты",
+      "kind": "input",
+      "description": "Нативный выбор даты.",
+      "html": "<input class=\"ds-date\" type=\"date\">",
+      "css": ".ds-date { height: 46px; padding: 0 10px; background: rgb(11 29 26 / .72); border: 1px solid rgb(241 236 221 / .4); border-radius: 3px; color: #f1ecdd; color-scheme: dark; font: 600 1.0625rem 'Sofia Sans Condensed', sans-serif; } .ds-date:hover { border-color: #f1ecdd; }"
+    },
+    {
+      "name": "Прибор высоты",
+      "kind": "custom",
+      "refersTo": "altimeter",
+      "description": "Высота и пояс для текущей прокрутки.",
+      "html": "<div class=\"ds-alti\"><b>1 306</b><span>м</span><i>Горная тундра</i></div>",
+      "css": ".ds-alti { display: inline-flex; align-items: baseline; gap: 6px; padding: 10px 12px; background: #0b1d1a; border: 1px solid #2f4d45; border-radius: 4px; color: #f1ecdd; } .ds-alti b { font: 800 2.5rem/1 'Sofia Sans Extra Condensed', sans-serif; font-variant-numeric: tabular-nums; } .ds-alti span { font: 600 1.125rem 'Sofia Sans Condensed', sans-serif; } .ds-alti i { color: #e0ac48; font: 600 1.0625rem 'Sofia Sans Condensed', sans-serif; }"
+    },
+    {
+      "name": "Заголовок раздела",
+      "kind": "custom",
+      "description": "Заголовок в одну линию с отметкой высоты.",
+      "html": "<header class=\"ds-stage\"><h2>Номера</h2><span></span><p>522 м</p></header>",
+      "css": ".ds-stage { display: flex; align-items: baseline; gap: 20px; color: #f1ecdd; background: #0e2621; padding: 16px; } .ds-stage h2 { margin: 0; font: 900 5rem/.86 'Sofia Sans Extra Condensed', sans-serif; text-transform: uppercase; } .ds-stage span { flex: 1; height: 1px; background: #2d4c43; } .ds-stage p { margin: 0; font: 600 2rem/1 'Sofia Sans Extra Condensed', sans-serif; font-variant-numeric: tabular-nums; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Подъём",
+    "overview": "Страница устроена как восхождение. Прокрутка ведёт по настоящему профилю тропы от домов на 520 м до вершины 1582 м, каждый раздел стоит на своей высоте, а цвет страницы равен поясу растительности на этой высоте. Система держится на правде: только снятое здесь видео, настоящий рельеф, настоящие цены.",
+    "keyCharacteristics": ["Цвет раздела равен поясу высоты", "Видео на весь экран как главный материал", "Сверхузкий чёрный шрифт для слов и высот, узкий для данных", "Настоящие хребты вместо декоративных разделителей", "Прибор вместо украшений"],
+    "rules": [
+      { "name": "The Belt Rule", "body": "Цвет фона определяется высотой раздела. Нового цвета для раздела не придумываем, ставим его на нужную высоту.", "section": "colors" },
+      { "name": "The Paper Is Ink Rule", "body": "Светлый кремовый цвет работает только как цвет текста. Единственный светлый фон на сайте это холодный кварцит на вершине.", "section": "colors" },
+      { "name": "The Fixed Slot Rule", "body": "Все цены, высоты и даты набраны табличными цифрами, поэтому при смене значения ничего не прыгает.", "section": "typography" },
+      { "name": "The Real Ridge Rule", "body": "Глубина на стыках создаётся только настоящими силуэтами, посчитанными по рельефу. Рисованные волны и угловые срезы не используем.", "section": "elevation" }
+    ],
+    "dos": ["Do подписывать каждое видео местом и автором со ссылкой на источник.", "Do ставить новый раздел на его настоящую высоту и брать цвет соответствующего пояса.", "Do считать графику из данных: рельеф, тропы, профили.", "Do писать короткими предложениями, факт вместо общих слов.", "Do проверять главные вещи при prefers-reduced-motion: видео и счётчик высоты работают и в этом режиме."],
+    "donts": ["Don't ставить подпись над заголовком: высота стоит рядом с заголовком, а не над ним.", "Don't делать одинаковые карточки с иконками для номеров и услуг.", "Don't использовать кремовый фон и декоративное стекло.", "Don't показывать съёмки чужих мест как местные и брать ролики без проверенной лицензии.", "Don't выдумывать цены, отзывы и расстояния."]
+  }
+}
