@@ -7,3 +7,4 @@ node_modules/
 .playwright-mcp/
 .impeccable/detect.json
 .impeccable/skylines-preview.html
+.impeccable/questions/

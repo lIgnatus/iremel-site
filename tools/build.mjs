@@ -22,7 +22,7 @@ const data = {
 
 fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
-fs.cpSync(path.join(root, 'public'), dist, { recursive: true });
+fs.cpSync(path.join(root, 'public'), dist, { recursive: true, filter: (p) => !p.endsWith('.webp.json') });
 fs.writeFileSync(path.join(dist, 'index.html'), renderPage(data));
 fs.writeFileSync(path.join(dist, 'styles.css'), fs.readFileSync(path.join(src, 'fonts.css'), 'utf8') + fs.readFileSync(path.join(src, 'styles.css'), 'utf8'));
 for (const f of ['main.js', 'map3d.js']) fs.copyFileSync(path.join(src, f), path.join(dist, f));
